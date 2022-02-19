@@ -1,0 +1,93 @@
+.toDoList{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.todoList{
+   margin:0 auto;
+   border: 3px solid rgb(226, 167, 5);
+   display: inline-block;
+   padding: 20px;
+   height: 100%;
+   border-radius: 5px;
+   box-shadow: 1px 1px 12px #222;
+   background-color: rgb(253, 213, 160);
+}
+
+.todoList__heading{
+   font-size: 50px;
+   padding: 20px;
+   margin-bottom: 20px;
+   line-height: 60px;
+   color: #ccc;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.span{
+    font-size: 30px;
+    color: rgb(224, 222, 222);
+}
+
+input{
+    height: 40px;
+    width: 400px;
+    border:none;
+    outline: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    box-shadow: 2px 2px 12px #555;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 8px;
+}
+
+input::placeholder{
+    font-size: 18px;
+    color: #ccc;
+    padding: 7px;
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+  box-sizing: border-box;
+  border: none;
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 12px #444;
+  color: rgb(129, 127, 127);
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+/* TODOITEM */
+.todo-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #999;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px #666;
+    margin-bottom: 8px;
+}
+
+.todo__item-box{
+    margin: 0;
+    padding: 4px;
+    color: #666;
+    font-size: 17px;
+    line-height: 7px;
+    font-family: 'Courier New', Courier, monospace;
+}
