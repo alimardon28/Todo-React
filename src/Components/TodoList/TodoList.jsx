@@ -4,9 +4,7 @@ import './TodoList.css';
 
 const Todolist = () => {
 
-    const [todos , setTodos] = useState([
-
-    ])
+    const [todos , setTodos] = useState([])
 
     const hendleDelete = (id) =>{
 
@@ -25,20 +23,33 @@ const Todolist = () => {
         todoInput.value = null
     }
 
+    const changeIsCompleted = (event , id) => {
+        console.log(id, event.target.checked);
+
+        const ischecked = event.target.checked
+
+        setTodos(state => state.map(element =>{
+                if(element.id === id){
+                    return{
+                        ...element,
+                        isCompleted:ischecked
+                    }
+                }
+                return element
+            }))
+    }
+
     return (
         <div className='toDoList'>
             <h1 className='todoList__heading'>ToDo List <span className='span'>(React.)</span></h1>
             <div className='todoList'>
                <form className='form'>
-                   <input id='todoInput' required placeholder='todo list' type="text" /><button type='button' onClick={handleAddTodo}>+</button>
+                   <input id='todoInput' className='handle__input' required placeholder='todo list' type="text" /><button type='button' onClick={handleAddTodo}>+</button>
                </form>
 
                {
                    todos.map(element => {
-                       return <Todoitem
-                                   key={element.id}
-                                   todo={element}
-                                   onDelete={hendleDelete}
+                       return <Todoitem key={element.id} todo={element}onDelete={hendleDelete} changeIsCompleted={changeIsCompleted}
                        />
                    })
                }

@@ -32,7 +32,7 @@
     color: rgb(224, 222, 222);
 }
 
-input{
+.handle__input{
     height: 40px;
     width: 400px;
     border:none;
@@ -45,7 +45,7 @@ input{
     padding: 8px;
 }
 
-input::placeholder{
+.handle__input::placeholder{
     font-size: 18px;
     color: #ccc;
     padding: 7px;
@@ -90,4 +90,23 @@ button{
     font-size: 17px;
     line-height: 7px;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.check__box{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.check{
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    box-shadow: 2px 2px 12px #444;
+    border: none;
+    outline: none;
 }
