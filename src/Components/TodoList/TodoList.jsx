@@ -2,7 +2,7 @@ import React, { useState }  from 'react';
 import Todoitem from './TodoItem';
 import './TodoList.css';
 
-const Todolist = () => {
+function App() {
 
     const [todos , setTodos] = useState([])
 
@@ -39,12 +39,13 @@ const Todolist = () => {
             }))
     }
 
+
     return (
         <div className='toDoList'>
             <h1 className='todoList__heading'>ToDo List <span className='span'>(React.)</span></h1>
             <div className='todoList'>
                <form className='form'>
-                   <input id='todoInput' className='handle__input' required placeholder='todo list' type="text" /><button type='button' onClick={handleAddTodo}>+</button>
+                   <input id='todoInput' className='handle__input'  placeholder='todo list' type="text" required/><button type='button' onClick={handleAddTodo}>+</button>
                </form>
 
                {
@@ -53,8 +54,13 @@ const Todolist = () => {
                        />
                    })
                }
+                <div className="all__button">
+                 <button className='all__btn'>All</button>
+                 <button className='comp__btn'>Completed</button>
+                 <button className='unComp__btn'>Uncompleted</button>
+              </div>
             </div>
          </div>
         );
     }
-export default Todolist;
+export default App;
