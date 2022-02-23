@@ -49,7 +49,7 @@ function App() {
                </form>
 
                {
-                   todos.map(element => {
+                 todos.map(element => {
                        return <Todoitem key={element.id} todo={element} onDelete={hendleDelete} changeIsCompleted={changeIsCompleted}
                        />
                    })
