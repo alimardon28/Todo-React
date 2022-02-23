@@ -45,12 +45,12 @@ function App() {
             <h1 className='todoList__heading'>ToDo List <span className='span'>(React.)</span></h1>
             <div className='todoList'>
                <form className='form'>
-                   <input id='todoInput' className='handle__input'  placeholder='todo list' type="text" required/><button type='button' onClick={handleAddTodo}>+</button>
+                   <input id='todoInput' className='handle__input'  placeholder='todo list' type="text" required/><button type='button' onClick={handleAddTodo}><i className='bi bi-plus'></i></button>
                </form>
 
                {
                    todos.map(element => {
-                       return <Todoitem key={element.id} todo={element}onDelete={hendleDelete} changeIsCompleted={changeIsCompleted}
+                       return <Todoitem key={element.id} todo={element} onDelete={hendleDelete} changeIsCompleted={changeIsCompleted}
                        />
                    })
                }
